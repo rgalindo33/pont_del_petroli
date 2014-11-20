@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rgalindo33@hotmail.com"]
   spec.summary       = %q{Real time PontdelPetroli buoy information.}
   spec.description   = %q{Fetches the data from Badalonas buoy and gives it as a ruby object.}
-  spec.homepage      = "http://rgalindo33.github.io/pont_del_petroli"
+  spec.homepage      = "https://github.com/rgalindo33/pont_del_petroli"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
