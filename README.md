@@ -18,9 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-At the moment is plain simple:
+Make sure you require the gem before:
 
     require 'pont_del_petroli'
+
+and then there are few commands available:
 
     PontDelPetroli.now
 returns the swell and meteo latest info
