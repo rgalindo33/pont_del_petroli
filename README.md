@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+At the moment is plain simple:
+
+    require 'pont_del_petroli'
+
+    PontDelPetroli.now # returns the latests swell data
+    PontDelPetroli.all # returns an array with all the avaiable swell data
 
 ## Contributing
 
