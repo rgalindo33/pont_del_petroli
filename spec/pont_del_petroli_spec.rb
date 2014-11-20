@@ -28,9 +28,9 @@ describe PontDelPetroli do
     end
   end
 
-  describe '.history' do
+  describe '.all' do
     it 'returns all data available' do
-      expect(subject.history).to be_a Array
+      expect(subject.all).to be_a Array
     end
   end
 end
