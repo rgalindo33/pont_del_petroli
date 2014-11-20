@@ -8,7 +8,7 @@ module PontDelPetroli
     PDPParser.new.run.first
   end
 
-  def self.history
+  def self.all
     PDPParser.new.run
   end
 
