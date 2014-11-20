@@ -10,5 +10,5 @@ group :development do
   gem 'pry'
 end
 
-# Specify your gem's dependencies in pontdelpetroli_data_wrapper.gemspec
+# Specify your gem's dependencies in pont_del_petroli.gemspec
 gemspec

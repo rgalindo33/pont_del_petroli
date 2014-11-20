@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe PontdelpetroliDataWrapper::PDPParser do
+describe PontDelPetroli::PDPParser do
 
-  let(:subject) { PontdelpetroliDataWrapper::PDPParser.new }
+  let(:subject) { PontDelPetroli::PDPParser.new }
 
   describe '#run' do
 
@@ -19,12 +19,12 @@ describe PontdelpetroliDataWrapper::PDPParser do
 
 end
 
-describe PontdelpetroliDataWrapper do
-  let(:subject) { PontdelpetroliDataWrapper }
+describe PontDelPetroli do
+  let(:subject) { PontDelPetroli }
 
   describe '.now' do
     it 'returns the latest buoy data' do
-      expect(subject.now).to be_a PontdelpetroliDataWrapper::SwellData
+      expect(subject.now).to be_a PontDelPetroli::SwellData
     end
   end
 

@@ -1,8 +1,8 @@
-require "pontdelpetroli_data_wrapper/version"
+require "pont_del_petroli/version"
 require 'open-uri'
 require 'nokogiri'
 
-module PontdelpetroliDataWrapper
+module PontDelPetroli
 
   def self.now
     PDPParser.new.run.first

@@ -1,4 +1,4 @@
-# PontdelpetroliDataWrapper
+# PontDelPetroli
 
 simple ruby gem that fetches the real time data from Badalonas pont del petroli buoy
 
@@ -6,7 +6,7 @@ simple ruby gem that fetches the real time data from Badalonas pont del petroli 
 
 Add this line to your application's Gemfile:
 
-    gem 'pontdelpetroli_data_wrapper'
+    gem 'pont_del_petroli'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install pontdelpetroli_data_wrapper
+    $ gem install pont_del_petroli
 
 ## Usage
 
@@ -22,7 +22,7 @@ TODO: Write usage instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/pontdelpetroli_data_wrapper/fork )
+1. Fork it ( https://github.com/[my-github-username]/pont_del_petroli/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
