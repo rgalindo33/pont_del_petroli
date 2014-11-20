@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PontdelpetroliDataWrapper::VERSION
   spec.authors       = ["Raul Galindo"]
   spec.email         = ["rgalindo33@hotmail.com"]
-  spec.summary       = %q{Get the real time buoy information in a ruby object.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Real time PontdelPetroli buoy information.}
+  spec.description   = %q{Fetches the data from Badalonas buoy and gives it as a ruby object.}
   spec.homepage      = "http://rgalindo33.github.io/pontdelpetroli_data_wrapper"
   spec.license       = "MIT"
 

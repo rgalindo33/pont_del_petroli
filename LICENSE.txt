@@ -1,4 +1,4 @@
-Copyright (c) 2014 rgalindo33
+Copyright (c) 2014 Raul Galindo. rgalindo33@gmail.com
 
 MIT License
 
