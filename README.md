@@ -22,8 +22,25 @@ At the moment is plain simple:
 
     require 'pont_del_petroli'
 
-    PontDelPetroli.now # returns the latests swell data
-    PontDelPetroli.all # returns an array with all the avaiable swell data
+    PontDelPetroli.now
+returns the swell and meteo latest info
+
+    PontDelPetroli.all
+returns an array with all the avaiable swell and meteo data
+
+    PontDelPetroli::Swell.now
+returns the swell latest info
+
+    PontDelPetroli::Swell.all
+returns an array with all the avaiable swell data
+
+    PontDelPetroli::Meteo.now
+returns the Meteo latest info
+
+    PontDelPetroli::Meteo.all
+returns an array with all the avaiable Meteo data
+
+
 
 ## Contributing
 
