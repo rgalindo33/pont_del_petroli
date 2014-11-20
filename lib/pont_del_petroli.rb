@@ -1,4 +1,6 @@
 require "pont_del_petroli/version"
+require "swell/parser"
+require "meteo/parser"
 
 module PontDelPetroli
   
@@ -18,21 +20,21 @@ module PontDelPetroli
 
   module Swell
     def self.now
-      SwellParser.new.run.first
+      Parser.new.run.first
     end
 
     def self.all
-      SwellParser.new.run
+      Parser.new.run
     end
   end
 
   module Meteo
     def self.now      
-      MeteoParser.new.run.first
+      Parser.new.run.first
     end
 
     def self.all
-      MeteoParser.new.run
+      Parser.new.run
     end
   end
 

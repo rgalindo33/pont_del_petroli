@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe PontDelPetroli::SwellParser do
+describe PontDelPetroli::Meteo::Parser do
 
-  let(:subject) { PontDelPetroli::SwellParser.new }
+  let(:subject) { PontDelPetroli::Meteo::Parser.new }
 
   describe '#run' do
 
@@ -13,7 +13,7 @@ describe PontDelPetroli::SwellParser do
     end
 
     it 'objects of the array are MeteoData' do
-      expect(data.first).to be_a PontDelPetroli::SwellData
+      expect(data.first).to be_a PontDelPetroli::Meteo::Data
     end
 
     it 'returns only meaningfull data' do

@@ -28,7 +28,7 @@ describe PontDelPetroli::Swell do
 
   describe '.now' do
     it 'returns the latest buoy data' do
-      expect(subject.now).to be_a PontDelPetroli::SwellData
+      expect(subject.now).to be_a PontDelPetroli::Swell::Data
     end
   end
 
@@ -44,7 +44,7 @@ describe PontDelPetroli::Meteo do
 
   describe '.now' do
     it 'returns the latest buoy data' do
-      expect(subject.now).to be_a PontDelPetroli::MeteoData
+      expect(subject.now).to be_a PontDelPetroli::Meteo::Data
     end
   end
 
