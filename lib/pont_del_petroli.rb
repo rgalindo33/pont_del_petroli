@@ -5,17 +5,14 @@ require "meteo/parser"
 module PontDelPetroli
   
   def self.now
-    {
-      swell_data: Swell.now,
-      meteo_data: Meteo.now
-    }
+    Data.new Swell.now, Meteo.now
   end
 
   def self.all
-    {
-      swell_data: Swell.all,
-      meteo_data: Meteo.all
-    }
+    Data.new Swell.all, Meteo.all
+  end
+
+  class Data < Struct.new :swell_data, :meteo_data
   end
 
   module Swell
