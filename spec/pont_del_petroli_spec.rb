@@ -1,26 +1,30 @@
 require 'spec_helper'
 
-describe PontDelPetroli::PDPParser do
+describe PontDelPetroli do
+  let(:subject) { PontDelPetroli }
 
-  let(:subject) { PontDelPetroli::PDPParser.new }
-
-  describe '#run' do
-
-    let(:data) { subject.run }
-
-    it 'parses the site' do
-      expect(data).to be_an Array
-    end
-
-    it 'returns only meaningfull data' do
-      expect(data.all?).to be true
+  describe '.now' do
+    it 'merges swell data and meteo data in a hash' do
+      expect(subject.now).to have_key :swell_data
+      expect(subject.now).to have_key :meteo_data
     end
   end
 
+  describe '.all' do
+    it 'merges swell data and meteo data in a hash' do
+      expect(subject.all).to have_key :swell_data
+      expect(subject.all).to have_key :meteo_data
+    end
+
+    it 'has an array of data on each key' do
+      expect(subject.all.fetch(:swell_data)).to be_a Array
+      expect(subject.all.fetch(:meteo_data)).to be_a Array
+    end
+  end
 end
 
-describe PontDelPetroli do
-  let(:subject) { PontDelPetroli }
+describe PontDelPetroli::Swell do
+  let(:subject) { PontDelPetroli::Swell }
 
   describe '.now' do
     it 'returns the latest buoy data' do
@@ -28,7 +32,23 @@ describe PontDelPetroli do
     end
   end
 
-  describe '.all' do
+  describe 'all' do
+    it 'returns all data available' do
+      expect(subject.all).to be_a Array
+    end
+  end
+end
+
+describe PontDelPetroli::Meteo do
+  let(:subject) { PontDelPetroli::Meteo }
+
+  describe '.now' do
+    it 'returns the latest buoy data' do
+      expect(subject.now).to be_a PontDelPetroli::MeteoData
+    end
+  end
+
+  describe 'all' do
     it 'returns all data available' do
       expect(subject.all).to be_a Array
     end

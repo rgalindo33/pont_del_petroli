@@ -1,49 +1,39 @@
 require "pont_del_petroli/version"
-require 'open-uri'
-require 'nokogiri'
 
 module PontDelPetroli
-
+  
   def self.now
-    PDPParser.new.run.first
+    {
+      swell_data: Swell.now,
+      meteo_data: Meteo.now
+    }
   end
 
   def self.all
-    PDPParser.new.run
+    {
+      swell_data: Swell.all,
+      meteo_data: Meteo.all
+    }
   end
 
-  class PDPParser
-    DATA_URL          = 'http://www.pontdelpetroli.org/oceano.aspx'
-    CSS_ROWS_SELECTOR = '#contenidos table#ctl00_ContentPlaceHolder1_Gridview1 tr'
-    EMPTY_CHAR        = "\u00A0"
-
-    def run
-      rows = Nokogiri::HTML(open(DATA_URL)).css CSS_ROWS_SELECTOR
-      
-      rows.drop(1).map do |row|
-        extract_data_from row
-      end.compact
+  module Swell
+    def self.now
+      SwellParser.new.run.first
     end
 
-  private
-
-    def extract_data_from row
-      return if is_empty? row
-
-      timestamp = Time.parse row.css('td:nth-child(1)').text
-      height    = row.css('td:nth-child(4)').text
-      direction = row.css('td:nth-child(5)').text
-      period    = row.css('td:nth-child(6)').text
-
-      SwellData.new timestamp, height, direction, period
-    end
-
-    def is_empty? row
-      row.css('td:nth-child(4)').text == EMPTY_CHAR
+    def self.all
+      SwellParser.new.run
     end
   end
 
-  class SwellData < Struct.new :timestamp, :height, :direction, :period
+  module Meteo
+    def self.now      
+      MeteoParser.new.run.first
+    end
+
+    def self.all
+      MeteoParser.new.run
+    end
   end
 
 end
