@@ -19,8 +19,8 @@ describe PontdelpetroliDataWrapper::PDPParser do
 
 end
 
-describe PontdelpetroliDataWrapper::PontDelPetroli do
-  let(:subject) { PontdelpetroliDataWrapper::PontDelPetroli }
+describe PontdelpetroliDataWrapper do
+  let(:subject) { PontdelpetroliDataWrapper }
 
   describe '.now' do
     it 'returns the latest buoy data' do

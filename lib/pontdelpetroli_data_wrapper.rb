@@ -4,14 +4,12 @@ require 'nokogiri'
 
 module PontdelpetroliDataWrapper
 
-  class PontDelPetroli
-    def self.now
-      PDPParser.new.run.first
-    end
+  def self.now
+    PDPParser.new.run.first
+  end
 
-    def self.history
-      PDPParser.new.run
-    end
+  def self.history
+    PDPParser.new.run
   end
 
   class PDPParser
