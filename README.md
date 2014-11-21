@@ -2,6 +2,8 @@
 
 simple ruby gem that fetches the real time data from Badalonas pont del petroli buoy
 
+[![Gem Version](https://badge.fury.io/rb/pont_del_petroli.svg)](http://badge.fury.io/rb/pont_del_petroli)
+
 ## Installation
 
 Add this line to your application's Gemfile:
